@@ -1,0 +1,24 @@
+# Code::Blocks workspace and project user files
+*.layout
+*.cbp.depend
+*.cbp.layout
+
+# Backup files
+*.depend
+*.cbp.cbTemp
+
+# Compiled objects and outputs
+bin/
+obj/
+*.o
+*.obj
+*.exe
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# Debug folders
+debug/
+release/
