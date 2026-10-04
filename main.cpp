@@ -6,6 +6,6 @@ using namespace std;
 int main()
 {
     cout << "Hello world!" << endl;
-    //someting new
+    //main is not included in the project for some reason
     return 0;
 }
