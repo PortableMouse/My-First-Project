@@ -37,9 +37,8 @@
 			<Add directory="C:/Program Files/CodeBlocks/Extra Includes/rlImGui-main" />
 		</Compiler>
 		<Linker>
-			<Add option="-lraylib -lopengl32 -lgdi32 -lwinmm" />
-			<Add library="C:/Program Files/CodeBlocks/Extra Includes/raylib-6.0_win64_mingw-w64/lib/libraylib.a" />
-			<Add library="C:/Program Files/CodeBlocks/Extra Includes/imgui-docking/lib/libimgui.a" />
+			<Add library="raylib" />
+			<Add library="imgui" />
 			<Add directory="C:/Program Files/CodeBlocks/Extra Includes/imgui-docking/lib" />
 			<Add directory="C:/Program Files/CodeBlocks/Extra Includes/raylib-6.0_win64_mingw-w64/lib" />
 		</Linker>
