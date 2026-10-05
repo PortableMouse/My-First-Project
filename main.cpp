@@ -26,13 +26,33 @@ int main()
 }
 
 void ImGuiBuild(){
+    using namespace ImGui;
     bool static Initilized = false;
     if (!Initilized){
         rlImGuiSetup(true);
+        ImGuiIO &io = GetIO();
+        io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
         Initilized = true;
     }
     rlImGuiBegin();
-    ImGui::ShowDemoWindow();
+    DockSpaceOverViewport(0, nullptr, ImGuiDockNodeFlags_PassthruCentralNode);
+    Begin("test");
+    Text("hello");
+    if (Button("button")){
+        std::cout << "Button\n";
+    }
+    SameLine();
+    if (Button("button##2")){
+        std::cout << "Different Button";
+    }
+    End();
+    Begin("Second Window");
+    Text("hello");
+    Separator();
+    NewLine();
+    static float a = 0;
+    SliderFloat("slider", &a, 0, 1);
+    End();
     rlImGuiEnd();
 }
 
