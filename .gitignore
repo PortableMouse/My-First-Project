@@ -22,3 +22,4 @@ obj/
 # Debug folders
 debug/
 release/
+imgui.ini
