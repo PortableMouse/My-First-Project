@@ -45,7 +45,7 @@
 			<Add directory="C:/Program Files/CodeBlocks/Extra Includes/imgui-docking/lib" />
 			<Add directory="C:/Program Files/CodeBlocks/Extra Includes/raylib-6.0_win64_mingw-w64/lib" />
 		</Linker>
-		<Unit filename="main.cpp" />
+		<Unit filename="Platform/main.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
