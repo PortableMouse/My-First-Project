@@ -3,8 +3,6 @@
 #include <imgui.h>
 #include <rlImGui.h>
 
-using namespace std;
-
 void ImGuiBuild();
 void ImGuiShutdown();
 
@@ -43,7 +41,7 @@ void ImGuiBuild(){
     }
     SameLine();
     if (Button("button##2")){
-        std::cout << "Different Button";
+        std::cout << "Different Button\n";
     }
     End();
     Begin("Second Window");
