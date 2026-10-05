@@ -7,9 +7,7 @@ using namespace std;
 
 int main()
 {
-
     SetConfigFlags(FLAG_WINDOW_RESIZABLE);
-
     InitWindow(800, 450, "window name");
     rlImGuiSetup(true);
     while (!WindowShouldClose()){
