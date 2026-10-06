@@ -45,6 +45,9 @@
 			<Add directory="C:/Program Files/CodeBlocks/Extra Includes/imgui-docking/lib" />
 			<Add directory="C:/Program Files/CodeBlocks/Extra Includes/raylib-6.0_win64_mingw-w64/lib" />
 		</Linker>
+		<Unit filename="GameLayer/Asserts.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="GameLayer/GameMain.cpp" />
 		<Unit filename="GameLayer/GameMain.h" />
 		<Unit filename="Platform/main.cpp" />
