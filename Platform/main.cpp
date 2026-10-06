@@ -20,7 +20,7 @@ int main()
 
     while (!WindowShouldClose()){
         BeginDrawing();
-        ClearBackground(RAYWHITE);
+        ClearBackground(BLACK);
         if (!updateGame()){
             CloseWindow();
         }
@@ -44,23 +44,7 @@ void ImGuiBuild(){
     }
     rlImGuiBegin();
     DockSpaceOverViewport(0, nullptr, ImGuiDockNodeFlags_PassthruCentralNode);
-    Begin("test");
-    Text("hello");
-    if (Button("button")){
-        std::cout << "Button\n";
-    }
-    SameLine();
-    if (Button("button##2")){
-        std::cout << "Different Button\n";
-    }
-    End();
-    Begin("Second Window");
-    Text("hello");
-    Separator();
-    NewLine();
-    static float a = 0;
-    SliderFloat("slider", &a, 0, 1);
-    End();
+
     rlImGuiEnd();
 }
 
