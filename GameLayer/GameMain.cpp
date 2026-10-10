@@ -22,11 +22,11 @@ bool initGame(){
 
     assetManager.loadAll();
 
-    gameData.gameMap.create(30, 10);
+    gameData.gameMap.create(30, 30);
 
     for (int y = 0; y < gameData.gameMap.h; y++)
         for (int x = 0; x < gameData.gameMap.w; x++){
-            if (y < (int)(gameData.gameMap.h / 2)){
+            if (y > (int)(gameData.gameMap.h / 2)){
                 gameData.gameMap.getBlockUnsafe(x, y).type = Block::dirt;
             }else {
                 gameData.gameMap.getBlockUnsafe(x, y).type = Block::air;
