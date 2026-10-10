@@ -1,4 +1,4 @@
-#include "gameMap.h"
+#include "GameMap.h"
 #include "../Platform/asserts.h"
 
 void GameMap::create(int w, int h){

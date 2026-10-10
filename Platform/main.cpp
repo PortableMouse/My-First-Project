@@ -1,7 +1,4 @@
-#include <iostream>
 #include <raylib.h>
-#include <imgui.h>
-#include <rlImGui.h>
 #include "../GameLayer/GameMain.h"
 
 void ImGuiShutdown();
@@ -14,6 +11,7 @@ int main()
     SetTargetFPS(240);
 
     if (!initGame()){
+        CloseWindow();
         return 0;
     }
 
