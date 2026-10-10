@@ -52,9 +52,7 @@
 		<Unit filename="GameLayer/GameMap.cpp" />
 		<Unit filename="GameLayer/GameMap.h" />
 		<Unit filename="GameLayer/Helpers.cpp" />
-		<Unit filename="GameLayer/Helpers.h">
-			<Option target="Debug" />
-		</Unit>
+		<Unit filename="GameLayer/Helpers.h" />
 		<Unit filename="GameLayer/assetManager.cpp" />
 		<Unit filename="GameLayer/assetManager.h" />
 		<Unit filename="GameLayer/blocks.h" />
