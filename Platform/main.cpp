@@ -21,12 +21,12 @@ int main()
         BeginDrawing();
         ClearBackground(BLACK);
         if (!updateGame()){
-            CloseWindow();
+            break;
         }
         EndDrawing();
     }
     ImGuiShutdown();
-    CloseWindow();
     closeGame();
+    CloseWindow();
     return 0;
 }
