@@ -13,7 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add option="-DDEVELOPLEMT_BUILD=0" />
+					<Add option="-DDEVELOPLEMT_BUILD=1" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -23,7 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add option="-DDEVELOPLEMT_BUILD=1" />
+					<Add option="-DDEVELOPLEMT_BUILD=0" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
