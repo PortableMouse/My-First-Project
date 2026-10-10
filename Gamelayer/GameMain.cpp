@@ -96,7 +96,29 @@ bool updateGame(){
         WHITE
         );
     EndMode2D();
+    ImGuiBuild();
     return true;
+}
+
+void ImGuiBuild(){
+    using namespace ImGui;
+    bool static Initilized = false;
+    if (!Initilized){
+        rlImGuiSetup(true);
+        ImGuiIO &io = GetIO();
+        io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+        Initilized = true;
+    }
+    rlImGuiBegin();
+    DockSpaceOverViewport(0, nullptr, ImGuiDockNodeFlags_PassthruCentralNode);
+    ImGui::Begin("Dev Kit");
+
+    ImGui::End();
+    rlImGuiEnd();
+}
+
+void ImGuiShutdown(){
+    rlImGuiShutdown();
 }
 
 void closeGame(){
