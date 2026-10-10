@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-DDEVELOPLEMT_BUILD=0" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-DDEVELOPLEMT_BUILD=1" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,7 +34,6 @@
 			<Add option="-Wall" />
 			<Add option="-std=c++26" />
 			<Add option="-fexceptions" />
-			<Add option="-DDEVELOPLEMT_BUILD=1" />
 			<Add directory="C:/Program Files/CodeBlocks/Extra Includes/imgui-docking" />
 			<Add directory="C:/Program Files/CodeBlocks/Extra Includes/raylib-6.0_win64_mingw-w64/include" />
 			<Add directory="C:/Program Files/CodeBlocks/Extra Includes/rlImGui-main" />
