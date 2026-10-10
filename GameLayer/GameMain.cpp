@@ -9,12 +9,12 @@
 #include <imgui.h>
 #include <rlImGui.h>
 
-void ImGuiBuild();
-
 struct GameData{
     GameMap gameMap;
     Camera2D camera;
 } gameData;
+
+void ImGuiBuild(GameData &gameData, int &SelectedBlock);
 
 AssetManager assetManager;
 
@@ -57,6 +57,8 @@ bool updateGame(){
     int blockX = (int)std::floor(worldPos.x);
     int blockY = (int)std::floor(worldPos.y);
 
+    static int SelectedBlock = 1;
+
     if (IsMouseButtonDown(MOUSE_BUTTON_LEFT)){
         auto b = gameData.gameMap.getBlockSafe(blockX, blockY);
         if (b){
@@ -67,7 +69,7 @@ bool updateGame(){
     if (IsMouseButtonDown(MOUSE_BUTTON_RIGHT)){
         auto b = gameData.gameMap.getBlockSafe(blockX, blockY);
         if (b){
-            b->type = Block::dirt;
+            b->type = SelectedBlock;
         }
     }
 
@@ -100,11 +102,11 @@ bool updateGame(){
         WHITE
         );
     EndMode2D();
-    ImGuiBuild();
+    ImGuiBuild(gameData, SelectedBlock);
     return true;
 }
 
-void ImGuiBuild(){
+void ImGuiBuild(GameData &gameData, int &SelectedBlock){
     using namespace ImGui;
     bool static Initilized = false;
     if (!Initilized){
@@ -114,9 +116,10 @@ void ImGuiBuild(){
         Initilized = true;
     }
     rlImGuiBegin();
-    DockSpaceOverViewport(0, nullptr, ImGuiDockNodeFlags_PassthruCentralNode);
+    ImGui::DockSpaceOverViewport(0, nullptr, ImGuiDockNodeFlags_PassthruCentralNode);
     ImGui::Begin("Dev Kit");
-
+    ImGui::Text("Block Selector");
+    ImGui::ListBox("##SelectedBlock", &SelectedBlock, blockNames, Block::BLOCKS_COUNT, 4);
     ImGui::End();
     rlImGuiEnd();
 }
