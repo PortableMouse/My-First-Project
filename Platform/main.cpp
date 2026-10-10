@@ -4,7 +4,6 @@
 #include <rlImGui.h>
 #include "../GameLayer/GameMain.h"
 
-void ImGuiBuild();
 void ImGuiShutdown();
 
 int main()
@@ -30,9 +29,4 @@ int main()
     CloseWindow();
     closeGame();
     return 0;
-}
-
-
-void ImGuiShutdown(){
-    rlImGuiShutdown();
 }

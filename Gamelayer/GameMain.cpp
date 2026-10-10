@@ -6,6 +6,10 @@
 #include "GameMap.h"
 #include "Helpers.h"
 #include <cmath>
+#include <imgui.h>
+#include <rlImGui.h>
+
+void ImGuiBuild();
 
 struct GameData{
     GameMap gameMap;
