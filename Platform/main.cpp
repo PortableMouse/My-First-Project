@@ -20,10 +20,10 @@ int main()
     while (!WindowShouldClose()){
         BeginDrawing();
         ClearBackground(BLACK);
-        if (!updateGame()){
-            break;
-        }
+        bool RunGame = updateGame();
+
         EndDrawing();
+        if (!RunGame) break;
     }
     ImGuiShutdown();
     closeGame();
